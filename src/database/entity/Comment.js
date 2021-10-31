@@ -1,7 +1,7 @@
 export function createComment(){
     let query=`
     CREATE TABLE IF NOT EXISTS comment (
-        comment_id INT PRIMARY KEY AUTO_INCREMENT,
+        comment_id INT PRIMARY KEY AUTO_INCREMENT UNSIGNED,
         commentor VARCHAR(30),
         comment VARCHAR(1000),
         comment_date TIMESTAMP,
