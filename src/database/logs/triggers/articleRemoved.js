@@ -1,3 +1,4 @@
+let executeQuery = require('../../function/query.js');
 export function articleRemovedTrigger(){
     let query=`
     DELIMITER $$
@@ -9,5 +10,5 @@ export function articleRemovedTrigger(){
     END$$
     DELIMITER ;
     `;
-    connection.query(query, (error)=>{throw error});
+    executeQuery(query);
 }

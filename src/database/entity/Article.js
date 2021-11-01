@@ -1,3 +1,4 @@
+let executeQuery = require('../function/query.js');
 export function createArticle(){
     let query = `        
     CREATE TABLE IF NOT EXISTS article (
@@ -8,5 +9,5 @@ export function createArticle(){
         upvotes INT NOT NULL DEFAULT 0 UNSIGNED,
         downvotes INT NOT NULL DEFAULT 0 UNSIGNED,
     )`;
-    connection.query(query,(error)=>{throw error;});
+    executeQuery(query);
 }

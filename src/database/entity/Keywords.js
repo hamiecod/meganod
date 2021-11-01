@@ -1,3 +1,4 @@
+let executeQuery=require('../functions/query.js');
 export function createKeywords(){
     let query=`
     CREATE TABLE IF NOT EXISTS keyword (
@@ -9,5 +10,5 @@ export function createKeywords(){
         FOREIGN KEY name REFERENCES tag(name) ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY value REFERENCES tag(value) ON DELETE CASCADE ON UPDATE CASCADE
     )`;
-    connection.query(query, (error)=>{throw error});
+    executeQuery(query);
 }

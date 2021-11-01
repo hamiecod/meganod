@@ -1,3 +1,4 @@
+let executeQuery = require('../function/query.js');
 export function createComment(){
     let query=`
     CREATE TABLE IF NOT EXISTS comment (
@@ -8,5 +9,5 @@ export function createComment(){
         article_id,
         FOREIGN KEY article id REFERENCES article(article_id) ON DELETE CASCADE ON UPDATE CASCADE
     )`;
-    connection.query(query, (error)=>{throw error});
+    executeQuery(query);
 }

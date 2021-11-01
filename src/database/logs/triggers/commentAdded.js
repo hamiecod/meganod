@@ -1,3 +1,4 @@
+let executeQuery=require('../../functions/query.js');
 export function commentAdded(){
     let query=`
     DELIMITER $$
@@ -9,5 +10,5 @@ export function commentAdded(){
     END$$
     DELIMITER ;
     `;
-    connection.query(query, (error)=>{throw error});
+    executeQuery(query);
 }
