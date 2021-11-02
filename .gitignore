@@ -1,0 +1,18 @@
+# editor configs
+.vscode
+.idea
+.vim
+
+# private Information
+.env
+
+# temporary files
+.tmp
+
+# os specific files
+.DStore
+Trash/
+$Recycle.Bin
+
+# node modules
+node_modules
