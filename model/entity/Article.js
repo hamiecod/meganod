@@ -13,7 +13,8 @@ function createArticle(){
         article_id INT PRIMARY KEY AUTO_INCREMENT,
         title VARCHAR(150) NOT NULL, 
         content MEDIUMTEXT NOT NULL,
-        status VARCHAR(15) DEFAULT 'public'
+        status VARCHAR(15) DEFAULT 'public',
+        date_published DATE NOT NULL
     )`;
     executeQuery.query(query);
 }

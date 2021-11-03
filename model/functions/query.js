@@ -13,4 +13,14 @@ function query(query) {
         }
     });
 }
-module.exports={query};
+function select(query) {
+    connection.query(query, function(error,results){
+        if(error){
+            console.error(error);
+        }
+        // always outputs the results to an existing variable
+        data = results;
+    });
+    return data;
+}
+module.exports={query, select};
