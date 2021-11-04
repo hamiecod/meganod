@@ -1,5 +1,11 @@
 const express=require('express');
 app = express();
+let cors=require('cors');
+
+// setting up cors
+app.use(cors({
+    origin: ['http://127.0.0.1:5500','http://localhost:5500']
+}));
 
 // needed for database querying
 executeQuery=require('../model/functions/query')
@@ -16,8 +22,6 @@ require('dotenv').config({
 connectDB.connect();
 
 // routes
-let article = require('./routes/article');
-let articleList = require('./routes/articleList');
 
 app.get('/article/:id', (req,res)=>{
     // the id requested
@@ -45,7 +49,7 @@ app.get('/articleList/:quantity', (req,res)=>{
     let quantity=req.params.quantity;
 
     let query=`
-    SELECT article.title, article.date_published, keywords.value
+    SELECT article.article_id, article.title, article.date_published, keywords.value
     FROM article
     LEFT JOIN keywords ON article.article_id=keywords.article_id
     WHERE (keywords.name LIKE 'description') OR article.article_id>0

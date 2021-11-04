@@ -19,6 +19,7 @@ function getArticleList(req,res){
     LIMIT ${quantity}
     `;
 
+    var data;
     let results=executeQuery.select(query);
 
     if(results===undefined){

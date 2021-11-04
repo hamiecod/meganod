@@ -7,7 +7,6 @@
  *    %query.select: an internal module function that queries the database
 */
 function getArticle(req,res){
-    var data;
     // the id requested
     let articleId=req.params.id;
     

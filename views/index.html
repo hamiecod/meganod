@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hackerdom blog</title>
+    <title>Hamie's Tech Jargon</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/9031ae7b04.js" crossorigin="anonymous"></script>
+    <script src="./js/populateHomePage.js" defer></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Hamie's tech jargon</h1>
+        <h1>Hamie's Tech Jargon</h1>
         <nav>
             <ul id="nav__list">
                 <li class="nav__list__item">
@@ -57,11 +62,11 @@
                 <div id="blogs__container">
                 <div class="blog__card">
                     <div class="blog__card__header">
-                        <h3>An introduction to computer engineering</h3>
+                        <h3><a href="#" class="blog__card__header--link">{title}</a></h3>
                         <span>{Date}</span>
                     </div>
                     <p class="blog__card__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac porta felis. Nullam lobortis rutrum dolor, quis scelerisque mi commodo non. Vivamus accumsan nisi lacus, eget pellentesque neque iaculis a.
+                        {description}
                     </p>
                     <!--<div class="blog__card__stats">
                         <div class="blog__card__stats--item" id="blog__card__stats--upvotes">
