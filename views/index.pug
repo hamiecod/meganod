@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Hamie's Tech Jargon
+  link(rel='stylesheet' href='/static/style.css')
+  script(src='https://kit.fontawesome.com/9031ae7b04.js' crossorigin='anonymous')
+  script(src='/static/js/populateHomePage.js' defer='')
+  script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+  script(src='/static/js/redirect.js', defer)
+header
+  h1 Hamie's Tech Jargon
+  nav
+    ul#nav__list
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Home
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | List
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Lorem
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Ipsum
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Dolor
+main
+  section#info
+    .info__card
+      h2 Information
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac porta felis. Nullam lobortis rutrum dolor, quis scelerisque mi commodo non. Vivamus accumsan nisi lacus, eget pellentesque neque iaculis a. Morbi a iaculis elit. Pellentesque quam nunc, rutrum sit amet tincidunt nec, pellentesque quis diam. Ut maximus, arcu vel euismod pulvinar, augue est consequat quam, nec luctus erat erat pellentesque sem. Etiam lobortis, nibh non rutrum laoreet, sapien risus ullamcorper nibh, at scelerisque odio nulla at ligula. Nam tincidunt nunc sed metus malesuada ornare. Nulla a ligula nec ex rutrum lobortis nec in libero. In augue quam, vulputate ac egestas.
+    .info__card
+      h2 Information
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac porta felis. Nullam lobortis rutrum dolor, quis scelerisque mi commodo non. Vivamus accumsan nisi lacus, eget pellentesque neque iaculis a. Morbi a iaculis elit. Pellentesque quam nunc, rutrum sit amet tincidunt nec, pellentesque quis diam. Ut maximus, arcu vel euismod pulvinar, augue est consequat quam, nec luctus erat erat pellentesque sem. Etiam lobortis, nibh non rutrum laoreet, sapien risus ullamcorper nibh, at scelerisque odio nulla at ligula. Nam tincidunt nunc sed metus malesuada ornare. Nulla a ligula nec ex rutrum lobortis nec in libero. In augue quam, vulputate ac egestas.
+    hr
+    section#blogs
+      h2#blogs__heading
+        | Articles
+      #blogs__container
+        .blog__card
+          .blog__card__header
+            h3
+              a.blog__card__header--link(href='#') {title}
+            span {Date}
+          p.blog__card__description
+            | {description}
+          hr.blog__end
+        .blog__card
+          .blog__card__header
+            h3
+              a.blog__card__header--link(href='#') {title}
+            span {Date}
+          p.blog__card__description
+            | {description}
+          hr.blog__end
+        .blog__card
+          .blog__card__header
+            h3
+              a.blog__card__header--link(href='#') {title}
+            span {Date}
+          p.blog__card__description
+            | {description}
+          hr.blog__end
+  aside
+    ul#aside__list
+      li.aside__list__item
+        a.aside__list__item--link(href='#')
+          | Home
+      li.aside__list__item
+        a.aside__list__item--link(href='#')
+          | List
+      li.aside__list__item
+        a.aside__list__item--link(href='#')
+          | Lorem
+      li.aside__list__item
+        a.aside__list__item--link(href='#')
+          | Ipsum
+      li.aside__list__item
+        a.aside__list__item--link(href='#')
+          | Dolor

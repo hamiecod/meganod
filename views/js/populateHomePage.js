@@ -23,9 +23,8 @@ function populateArticles(elemArr, dataArr){
     console.error("The parameters are bad values")
   }
   [...elemArr].forEach((e,k)=>{
-    console.log(e.firstElementChild.firstElementChild);
     e.firstElementChild.firstElementChild.innerHTML=dataArr[k].title;
-    e.firstElementChild.firstElementChild.setAttribute("href", `http://localhost:3177/article/${dataArr[k].article_id}`);
+    // e.firstElementChild.firstElementChild.setAttribute("href", `http://localhost:3177/article/${dataArr[k].article_id}`);
     e.children[1].innerHTML=(dataArr[k].date_published.split('T')[0]);
   });
 }

@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title #{title}
+  link(rel='stylesheet' href='/static/article.css')
+  script(src='./js/populateArticle.js' defer)
+header
+  h2.header__heading #{title}
+  nav
+    ul#nav__list
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Home
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | List
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Lorem
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Ipsum
+      li.nav__list__item
+        a.nav__list__item--link(href='#')
+          | Dolor
+main
+  section#content
+    | #{content}
