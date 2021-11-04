@@ -10,10 +10,10 @@
 function createTag(){
     let query=`
     CREATE TABLE IF NOT EXISTS tag (
+        tag_id INT PRIMARY KEY,
         name VARCHAR(30),
         value VARCHAR(255),
-        PRIMARY KEY(name, value),
-        INDEX(value)
+        INDEX(tag_id)
     )`;
     executeQuery.query(query);
 }

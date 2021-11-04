@@ -12,12 +12,10 @@ function createKeywords() {
   let query=`
   CREATE TABLE IF NOT EXISTS keywords (
     article_id INT,
-    name VARCHAR(30),
-    value VARCHAR(255),
-    PRIMARY KEY(article_id, name, value),
+    tag_id INT,
+    PRIMARY KEY(article_id, tag_id),
     FOREIGN KEY (article_id) REFERENCES article(article_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (name) REFERENCES tag(name) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (value) REFERENCES tag(value) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (tag_id) REFERENCES tag(tag_id) ON DELETE CASCADE ON UPDATE CASCADE
   )`;
   executeQuery.query(query);
 }
