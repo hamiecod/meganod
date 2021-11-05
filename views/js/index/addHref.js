@@ -19,4 +19,4 @@ let titleInterval=setInterval(() => {
     })
     clearInterval(titleInterval);
   }
-}, 150);
+}, 120);

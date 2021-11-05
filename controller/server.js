@@ -31,6 +31,9 @@ app.use('/static', express.static('../views'));
 app.get('/', (req,res)=>{
     res.status(200).render('index.pug');
 })
+app.get('/dashboard', (req,res)=>{
+    res.status(200).render('dashboard.pug');
+})
 app.get('/article/:id', (req,res)=>{
     // the id requested
     let articleId=req.params.id;
@@ -43,7 +46,6 @@ app.get('/article/:id', (req,res)=>{
     
     var data;
     let results = executeQuery.select(query);
-    console.log(results);
 
     if(results===undefined){
         res.status(404).send('This page does not exist');
@@ -58,10 +60,11 @@ app.get('/articleList/:quantity', (req,res)=>{
     let quantity=req.params.quantity;
 
     let query=`
-    SELECT article.article_id, article.title, article.date_published, keywords.value, article.status
+    SELECT article.article_id, article.title, article.date_published, tag.value, article.status
     FROM article
-    LEFT JOIN keywords ON article.article_id=keywords.article_id
-    WHERE ((keywords.name LIKE 'description') AND (article.status<>'private')) OR ((article.article_id>0) AND (article.status<>'private'))
+    INNER JOIN keywords ON article.article_id=keywords.article_id
+    INNER JOIN tag ON keywords.tag_id=tag.tag_id
+    WHERE ((tag.name LIKE 'description') AND (article.status<>'private')) OR ((article.article_id>0) AND (article.status<>'private'))
     ORDER BY date_published DESC
     LIMIT ${quantity}
     `;

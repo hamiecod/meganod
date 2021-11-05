@@ -10,7 +10,6 @@ async function getData() {
 }
 getData();
 setTimeout(() => {
-  console.log(articleData);
   populateData();
 }, 100)
 

@@ -10,7 +10,7 @@
 function createTag(){
     let query=`
     CREATE TABLE IF NOT EXISTS tag (
-        tag_id INT PRIMARY KEY,
+        tag_id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(30),
         value VARCHAR(255),
         INDEX(tag_id)

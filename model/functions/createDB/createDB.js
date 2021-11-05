@@ -11,3 +11,4 @@ executeQuery=require('../query');
 // module used for creating the database system
 let system=require('./modules/createSystem');
 system.createSystem();
+connection.end();

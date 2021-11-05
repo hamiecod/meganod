@@ -1,12 +1,12 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Nunito"
 }
 header{
     margin: 4vh 4vh 0vh 0vh;
     width: 100%;
-    font-family: "Helvetica", sans;
 }
 header h1{
     font-size: 2.5rem;
@@ -37,7 +37,6 @@ header nav{
 main{
     height: 100%;
     width: 100%;
-    font-family: "Helvetica", sans;
     padding: 3vh;
     display: grid;
     grid-template-columns: 15fr 2fr;
@@ -105,4 +104,17 @@ main aside {
 }
 .blog__end{
     margin: 2vh;
+}
+#blogs__more{
+    outline:none;
+    border:none;
+    font-family: inherit;
+    height: 6vh;
+    width: 10vw;
+    margin: 3vh 0vh 2vh 0vh;
+    transform: translate(33vw, 1vw);
+    border-radius: 1vh;
+    border: 1px solid rgb(24, 0, 70);
+    font-size: 1rem;
+    cursor: pointer;
 }
